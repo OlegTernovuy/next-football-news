@@ -1,10 +1,4 @@
-import styled from 'styled-components';
-
-const GlobalWrapper = styled('div')({
-    padding: '2rem 0',
-});
-
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -24,6 +18,19 @@ const GlobalStyles = createGlobalStyle`
     body {
         padding: 2rem;
     }
+
+    a {
+        text-decoration: none;
+        color: ${({ theme: { colors } }) => colors.primary};
+    }
+
+    ul {
+        list-style-type: none;
+    }
+`;
+
+const GlobalWrapper = styled.div`
+    padding-bottom: '2rem';
 `;
 
 export { GlobalStyles, GlobalWrapper };

@@ -10,4 +10,14 @@ const PaginationStyle = styled.div`
     justify-content: center;
 `;
 
-export { CardImag, PaginationStyle };
+const CardActionsStyle = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    > span {
+        margin: 0;
+    }
+`;
+
+export { CardImag, PaginationStyle, CardActionsStyle };
