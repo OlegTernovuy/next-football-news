@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import {
     Grid,
     Typography,
@@ -7,8 +9,6 @@ import {
     CardActions,
     Card,
 } from '@mui/material';
-import Link from 'next/link';
-
 import { CardActionsStyle, CardImag } from '../../../styles/FootballTeamsStyle';
 import { GlobalWrapper } from '../../../styles/GlobalStyle';
 

@@ -1,9 +1,9 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import Header from '@/components/Header';
-import ClientProvider from '@/components/ClientProvider';
-import { Suspense } from 'react';
+import Header from '../components/Header';
+import ClientProvider from '../components/ClientProvider';
 import Loading from './loading';
 
 const inter = Inter({ subsets: ['latin'] });

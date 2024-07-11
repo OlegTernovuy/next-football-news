@@ -7,12 +7,12 @@ import {
     CardActions,
     Card,
 } from '@mui/material';
-
 import { GlobalWrapper } from '../../../../styles/GlobalStyle';
 import {
     CardActionsStyle,
     CardImag,
 } from '../../../../styles/FootballTeamsStyle';
+
 import { PlayerInfo } from '../../../../types/football';
 
 interface teamSquadProps {
@@ -57,11 +57,7 @@ const PlayersTeam = ({ teamSquad }: teamSquadProps) => {
                                     >
                                         {team?.date_of_birth}
                                     </Typography>
-                                    <CardActions>
-                                        {/* <Link href={`/teams/${team.id}`}>
-                                            Learn More
-                                        </Link> */}
-                                    </CardActions>
+                                    <CardActions></CardActions>
                                 </CardActionsStyle>
                             </Card>
                         </Grid>

@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Grid } from '@mui/material';
 
+import { Grid } from '@mui/material';
 import { SingleTvStation, TvStationImg } from '../../../styles/TvStationsStyle';
 
 import { TvStations } from '../../../types/football';
