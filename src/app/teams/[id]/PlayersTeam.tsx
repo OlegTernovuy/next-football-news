@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 import {
     Grid,
     Typography,
@@ -9,26 +7,29 @@ import {
     CardActions,
     Card,
 } from '@mui/material';
-import { CardActionsStyle, CardImag } from '../../../styles/FootballTeamsStyle';
-import { GlobalWrapper } from '../../../styles/GlobalStyle';
+import { GlobalWrapper } from '../../../../styles/GlobalStyle';
+import {
+    CardActionsStyle,
+    CardImag,
+} from '../../../../styles/FootballTeamsStyle';
 
-import { Team } from '../../../types/football';
+import { PlayerInfo } from '../../../../types/football';
 
-interface teamsProps {
-    teams: Team[] | undefined;
+interface teamSquadProps {
+    teamSquad: (PlayerInfo | undefined)[];
 }
 
-const TeamCard = ({ teams }: teamsProps) => {
+const PlayersTeam = ({ teamSquad }: teamSquadProps) => {
     return (
         <GlobalWrapper>
             <Grid container spacing={2}>
-                {teams &&
-                    teams.map((team) => (
-                        <Grid item xs={12} sm={6} md={4} lg={3} key={team.id}>
+                {teamSquad &&
+                    teamSquad.map((team) => (
+                        <Grid item xs={12} sm={6} md={4} lg={3} key={team?.id}>
                             <Card>
                                 <CardImag
-                                    alt={team.short_code}
-                                    src={team.image_path}
+                                    alt={team?.name}
+                                    src={team?.image_path}
                                 />
                                 <CardContent>
                                     <Typography
@@ -36,7 +37,7 @@ const TeamCard = ({ teams }: teamsProps) => {
                                         variant="h5"
                                         component="div"
                                     >
-                                        {team.name}
+                                        {team?.display_name}
                                     </Typography>
                                     <Typography
                                         variant="body2"
@@ -54,13 +55,9 @@ const TeamCard = ({ teams }: teamsProps) => {
                                         variant="h6"
                                         component="span"
                                     >
-                                        {team.founded}
+                                        {team?.date_of_birth}
                                     </Typography>
-                                    <CardActions>
-                                        <Link href={`/teams/${team.id}`}>
-                                            Learn More
-                                        </Link>
-                                    </CardActions>
+                                    <CardActions></CardActions>
                                 </CardActionsStyle>
                             </Card>
                         </Grid>
@@ -70,4 +67,4 @@ const TeamCard = ({ teams }: teamsProps) => {
     );
 };
 
-export default TeamCard;
+export default PlayersTeam;

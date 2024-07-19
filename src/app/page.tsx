@@ -1,5 +1,5 @@
-import PaginationComponent from '@/components/teams/Pagination';
-import TeamCard from '@/components/teams/TeamCard';
+import PaginationComponent from '../components/teams/Pagination';
+import TeamCard from '../components/teams/TeamCard';
 
 import { getTeams } from '../../api/football';
 
